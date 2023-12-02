@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Torque</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <article>
+    <h1>Calculadora de Torque</h1>
+    <section>
+    <form method="post">
+        <fieldset>
+        <label for="tension_linea">Tensión de Línea (V):</label>
+        <input type="text" name="tension_linea" required><br>
+        
+        <label for="corriente_linea">Corriente de Línea (A):</label>
+        <input type="text" name="corriente_linea" required><br>
+        
+        <label for="factor_potencia">Factor de Potencia:</label>
+        <input type="text" name="factor_potencia" required><br>
+        
+        <label for="frecuencia">Frecuencia (Hz):</label>
+        <input type="text" name="frecuencia" required><br>
+        
+        <button type="submit">Calcular</button>
+    </fieldset>
+    </form>
+</section>
+<section>
+    {% if resultado %}
+        <h2>Resultado del cálculo:</h2>
+        <p>tension_linea: {{ tension_linea }} Vac.</p>
+        <p>corriente_linea: {{ corriente_linea }} A.</p>
+        <p>factor_potencia: {{ factor_potencia }}.</p>
+        <p>frecuencia: {{ frecuencia }} Hz.</p>
+        <p>El torque resultante es: {{ resultado }} Nm</p>
+    {% endif %}
+</section>
+</article> 
+
+</body>
+</html>
