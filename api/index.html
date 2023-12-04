@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
+    <main>
     <article>
     <h1>Calculadora de Torque</h1>
-    <section>
     <form method="post">
         <fieldset>
         <label for="tension_linea">Tensión de Línea (V):</label>
@@ -27,8 +27,7 @@
         <button type="submit">Calcular</button>
     </fieldset>
     </form>
-</section>
-<section>
+
     {% if resultado %}
         <h2>Resultado del cálculo:</h2>
         <p>tension_linea: {{ tension_linea }} Vac.</p>
@@ -37,8 +36,20 @@
         <p>frecuencia: {{ frecuencia }} Hz.</p>
         <p>El torque resultante es: {{ resultado }} Nm</p>
     {% endif %}
-</section>
-</article> 
 
+</article> 
+<article class="ohm">
+    <h2>Ley de Ohm.</h2>
+    <form action="">
+        <fieldset> 
+            <input type="text" name="voltaje" id="voltaje" placeholder="Voltaje">
+            <input type="text" name="corriente" id="corriente" placeholder="Corriente">
+            <input type="text" name="corriene" id="corriente" placeholder="corriene">
+           <button type="submit">calcular</button>
+        </fieldset>
+        
+    </form>
+</article>
+</main>
 </body>
 </html>
